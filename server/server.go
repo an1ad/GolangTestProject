@@ -9,7 +9,9 @@ func main() {
 	RunServer()
 }
 
+// RunServer - функция для настройки и запуска HTTP-сервера.
 func RunServer() {
+	// Обработчик запросов, который отправляет "OK" в ответ.
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "OK")
 	})
